@@ -35,8 +35,7 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var label = params[0];
       var name = params[1];
       var checked = params[2] ? "checked" : ""
-      //return '<input type="checkbox"><label>Test</label>';
-      return `<input type="checkbox" checked="${checked}" name="${name}"><label for="vehicle1">${label}</label>`
+      return `<input type="checkbox" ${checked} name="${name}"><label for="vehicle1">${label}</label>`
     },
     superscript: function(params) {
       var text = params[0];
