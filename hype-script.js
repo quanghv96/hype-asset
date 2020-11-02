@@ -31,7 +31,7 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var listItems = params.map(param => '<li class="bullet">' + param + '</li>');
       return '<ol class="bulletGroup">' + listItems.join('') + '</ol>';
     },
-    checbox: function(params) {
+    checkbox: function(params) {
       var label = params[0];
       var name = params[1];
       var checked = params[2] ? "checked" : ""
