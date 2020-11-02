@@ -25,7 +25,7 @@ function sh_initCourseContent(hypeDocument, element, event) {
     },
     bullet: function(params) {
       var text = params[0];
-      return '<li class=\"bullet\">' + text + '</li>';
+      return '<li class=\"\">' + text + '</li>';
     },
     bulletGroup: function(params) {
       var listItems = params.map(param => '<li class="bullet">' + param + '</li>');
