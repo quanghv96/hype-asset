@@ -19,10 +19,6 @@ function sh_initCourseContent(hypeDocument, element, event) {
     divider: function(params) {
       return '<hr class=\"rule\" />';
     },
-    numberBullet: function(params) {
-      var text = params[0];
-      return '<li class=\"bullet\">' + text + '</li>';
-    },
     bullet: function(params) {
       var text = params[0];
       return '<li class=\"\">' + text + '</li>';
