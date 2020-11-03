@@ -106,6 +106,10 @@ function sh_initCourseContent(hypeDocument, element, event) {
            </div>
         </div>`
       );
+    },
+    sortableGroup: function(params){
+      var listItems = params.map(param => '<li class="sortableItem">' + param + '</li>');
+      return '<ul class="sortableGroup">' + listItems.join('') + '</ul>';
     }
   };
 
