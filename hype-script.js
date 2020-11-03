@@ -83,6 +83,13 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var description = params[1];
       var imageName = params[2];
       var imageSource = resourcesFolder + '/' + imageName;
+      var imageStyle = [
+        "background-size: contain;",
+        "background-repeat: no-repeat;",
+        "width: 100%;",
+        "height: 0;",
+        "padding-top: 20%;"
+      ].join("");
       return (
         `<div class="accordion">
            <div class="accordion-title">
@@ -90,7 +97,7 @@ function sh_initCourseContent(hypeDocument, element, event) {
            </div>
            <div class="accordion-detail" style="display:none">
              <div>${description}</div>
-             <div class="bg-image bg-fill" style="height: 100px;background-image:url(${imageSource})"></div>
+             <div class="bg-image bg-fill" style="${imageStyle} background-image:url(${imageSource})"></div>
            </div>
         </div>`
       );
