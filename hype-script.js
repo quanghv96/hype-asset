@@ -81,15 +81,21 @@ function sh_initCourseContent(hypeDocument, element, event) {
     accordion: function(params) {
       var title = params[0];
       var description = params[1];
-      var imageName = params[2];
-      var imageSource = resourcesFolder + '/' + imageName;
-      var imageStyle = [
-        "background-size: contain;",
-        "background-repeat: no-repeat;",
-        "width: 100%;",
-        "height: 0;",
-        "padding-top: 20%;"
-      ].join("");
+      var imgDiv = "";
+      if (params[2]) {
+        var imageName = params[2];
+        var imageSource = resourcesFolder + '/' + imageName;
+        var imageStyle = [
+          "background-size: contain;",
+          "background-repeat: no-repeat;",
+          "width: 100%;",
+          "height: 0;",
+          "padding-top: 20%;"
+        ].join("");
+        imgDiv = `<div class="bg-image bg-fill" style="${imageStyle} background-image:url(${imageSource})"></div>`
+      }
+      
+      var 
       return (
         `<div class="accordion">
            <div class="accordion-title">
@@ -97,7 +103,7 @@ function sh_initCourseContent(hypeDocument, element, event) {
            </div>
            <div class="accordion-detail" style="display:none">
              <div>${description}</div>
-             <div class="bg-image bg-fill" style="${imageStyle} background-image:url(${imageSource})"></div>
+             ${imgDiv}
            </div>
         </div>`
       );
