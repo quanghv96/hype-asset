@@ -98,7 +98,8 @@ function sh_initCourseContent(hypeDocument, element, event) {
       return (
         `<div class="accordion">
            <div class="accordion-title">
-             <p>${title}</p>
+             <span>${title}</span>
+             <i class="fa fa-plus"></i>
            </div>
            <div class="accordion-detail" style="display:none">
              <div>${description}</div>
@@ -108,7 +109,11 @@ function sh_initCourseContent(hypeDocument, element, event) {
       );
     },
     sortableGroup: function(params){
-      var listItems = params.map(param => '<li class="sortableItem">' + param + '</li>');
+      var listItems = params.map(param => {
+        return (
+            `<li class="sortableItem"><span>${param}</span><i class="fa fa-bars"></i></li>`
+        );
+      });
       return '<ul class="sortableGroup">' + listItems.join('') + '</ul>';
     }
   };
