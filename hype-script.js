@@ -88,7 +88,7 @@ function sh_initCourseContent(hypeDocument, element, event) {
             <a id="hide1" href="#hide1" class="accordian-hide">${title} +</a>
             <a id="hide2" href="#hide2" class="accordian-show">${title} -</a>
             <div class="accordian-details">
-              <div class="accordian-desc">${description}</div>
+              ${description}
               <div class="accordian-img bg-image bg-fill" style="background-image:url('${imageSource}')"></div>
             </div>
         </div>`
