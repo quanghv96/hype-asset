@@ -78,6 +78,19 @@ function sh_initCourseContent(hypeDocument, element, event) {
         ');\"></div>'
       );
     },
+    expandable: function(params) {
+      var title = params[0];
+      var description = params[1];
+      var imageName = params[2];
+      var imageSource = resourcesFolder + '/' + imageName;
+      return (
+        `<div class="accordian">
+          <div class="accordian-title">${title}</div>
+          <div>${description}</div>
+          <div class="bg-image bg-fill" style="background-image:url('${imageSource}')"></div>
+        </div>`
+      );
+    }
   };
 
   function render(tags) {
