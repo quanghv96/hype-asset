@@ -78,19 +78,19 @@ function sh_initCourseContent(hypeDocument, element, event) {
         ');\"></div>'
       );
     },
-    expandable: function(params) {
+    accordion: function(params) {
       var title = params[0];
       var description = params[1];
       var imageName = params[2];
       var imageSource = resourcesFolder + '/' + imageName;
       return (
-        `<div>
-           <div class="expandContent">
+        `<div class="accordion">
+           <div class="accordion-title">
              <p>${title}</p>
            </div>
-           <div class="showMe" style="display:none">
+           <div class="accordion-detail" style="display:none">
              <div>${description}</div>
-             <div class="bg-image bg-fill" style="background-image:url(${imageSource})"></div>
+             <div class="bg-image bg-fill" style="height: 100px;background-image:url(${imageSource})"></div>
            </div>
         </div>`
       );
