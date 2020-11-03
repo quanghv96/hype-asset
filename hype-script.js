@@ -84,13 +84,15 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var imageName = params[2];
       var imageSource = resourcesFolder + '/' + imageName;
       return (
-        `<div class="expandContent">
-           <p>${title}</p>
-         </div>
-         <div class="showMe" style="display:none">
-           <div>${description}</div>
-           <div class="bg-image bg-fill" style="background-image:url(${imageSource})"></div>
-         </div>`
+        `<div>
+           <div class="expandContent">
+             <p>${title}</p>
+           </div>
+           <div class="showMe" style="display:none">
+             <div>${description}</div>
+             <div class="bg-image bg-fill" style="background-image:url(${imageSource})"></div>
+           </div>
+        </div>`
       );
     }
   };
