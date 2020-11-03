@@ -85,8 +85,8 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var imageSource = resourcesFolder + '/' + imageName;
       return (
         `<div class="accordian">
-            <div class="accordian-hide">${title} +</div>
-            <div class="accordian-show">${title} -</div>
+            <a id="hide1" href="#hide1" class="accordian-hide">${title} +</a>
+            <a id="hide2" href="#hide2" class="accordian-show">${title} -</a>
             <div class="accordian-details">
               <div>${description}</div>
               <div class="bg-image bg-fill" style="background-image:url('${imageSource}')"></div>
