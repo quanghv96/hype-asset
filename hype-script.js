@@ -95,7 +95,6 @@ function sh_initCourseContent(hypeDocument, element, event) {
         imgDiv = `<div class="bg-image bg-fill" style="${imageStyle} background-image:url(${imageSource})"></div>`
       }
       
-      var 
       return (
         `<div class="accordion">
            <div class="accordion-title">
