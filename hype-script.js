@@ -86,12 +86,15 @@ function sh_initCourseContent(hypeDocument, element, event) {
       return (
         `
           <div>
-            <a id="hide1" href="#hide1" class="hide">+ Summary goes here</a>
-            <a id="show1" href="#show1" class="show">- Summary goes here</a>
-            <div class="details">
-            Content goes here.
-            </div>
-          </div>
+  <fieldset class="majorpoints">
+    <legend class="majorpointslegend">Expand</legend>
+    <div class="hider" style="display:none" >
+        <ul>
+            <li>cccc</li>
+            <li></li>
+        </ul>
+    </div>
+</div>
         `
       );
       /*
