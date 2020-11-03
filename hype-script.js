@@ -84,6 +84,18 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var imageName = params[2];
       var imageSource = resourcesFolder + '/' + imageName;
       return (
+        `
+          <div>
+            <a id="hide1" href="#hide1" class="hide">+ Summary goes here</a>
+            <a id="show1" href="#show1" class="show">- Summary goes here</a>
+            <div class="details">
+            Content goes here.
+            </div>
+          </div>
+        `
+      );
+      /*
+      return (
         `<div class="accordian">
             <a id="hide1" href="#hide1" class="accordian-hide">${title} +</a>
             <a id="hide2" href="#hide2" class="accordian-show">${title} -</a>
@@ -93,6 +105,7 @@ function sh_initCourseContent(hypeDocument, element, event) {
             </div>
         </div>`
       );
+      */
     }
   };
 
