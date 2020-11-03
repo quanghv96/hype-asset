@@ -84,31 +84,14 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var imageName = params[2];
       var imageSource = resourcesFolder + '/' + imageName;
       return (
-        `
-          <div>
-  <fieldset class="majorpoints">
-    <legend class="majorpointslegend">Expand</legend>
-    <div class="hider" style="display:none" >
-        <ul>
-            <li>cccc</li>
-            <li></li>
-        </ul>
-    </div>
-</div>
-        `
+        `<div class="expandContent">
+           <a href="#">${title}</a>
+         </div>
+         <div class="showMe" style="display:none">
+           <div>${description}</div>
+           <div class="bg-image bg-fill" style="background-image:url(${imageSource})"></div>
+         </div>`
       );
-      /*
-      return (
-        `<div class="accordian">
-            <a id="hide1" href="#hide1" class="accordian-hide">${title} +</a>
-            <a id="hide2" href="#hide2" class="accordian-show">${title} -</a>
-            <div class="accordian-details">
-              ${description}
-              <div class="accordian-img bg-image bg-fill" style="background-image:url('${imageSource}')"></div>
-            </div>
-        </div>`
-      );
-      */
     }
   };
 
