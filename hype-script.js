@@ -85,7 +85,7 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var imageSource = resourcesFolder + '/' + imageName;
       return (
         `<div class="expandContent">
-           <a href="#">${title}</a>
+           <p>${title}</p>
          </div>
          <div class="showMe" style="display:none">
            <div>${description}</div>
