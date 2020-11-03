@@ -85,9 +85,11 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var imageSource = resourcesFolder + '/' + imageName;
       return (
         `<div class="accordian">
-          <div class="accordian-title">${title}</div>
-          <div>${description}</div>
-          <div class="bg-image bg-fill" style="background-image:url('${imageSource}')"></div>
+            <details>
+              <summary>Step by Step Guides</summary>
+              <div>${description}</div>
+              <div class="bg-image bg-fill" style="background-image:url('${imageSource}')"></div>
+            </details>          
         </div>`
       );
     }
