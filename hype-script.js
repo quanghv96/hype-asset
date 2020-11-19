@@ -82,6 +82,7 @@ function sh_initCourseContent(hypeDocument, element, event) {
       var title = params[0];
       var description = params[1];
       var imgDiv = "";
+      var videoDiv = "";
       if (params[2]) {
         var imageName = params[2];
         var imageSource = resourcesFolder + '/' + imageName;
@@ -94,6 +95,11 @@ function sh_initCourseContent(hypeDocument, element, event) {
         ].join("");
         imgDiv = `<div class="bg-image bg-fill" style="${imageStyle} background-image:url(${imageSource})"></div>`
       }
+      if (params[3]) {
+        var videoFile = params[3];
+        var videoSource = resourcesFolder + '/' + videoFile;
+        videoDiv = '<video playsinline controls><source src=\"' + videoSource + '\" type=\"video/mp4\" /></video>';
+      }
       
       return (
         `<div class="accordion">
@@ -104,18 +110,34 @@ function sh_initCourseContent(hypeDocument, element, event) {
            <div class="accordion-detail" style="display:none">
              <div>${description}</div>
              ${imgDiv}
+             ${videoDiv}
            </div>
         </div>`
       );
     },
     sortableGroup: function(params){
-      var listItems = params.map(param => {
+      var topLabel = params[0]
+      var botLabel = params[1]
+      var items = params.filter((v, i) => i > 1);
+      var listItems = items.map(param => {
         return (
             `<li class="sortableItem"><span>${param}</span><i class="fa fa-bars"></i></li>`
         );
       });
       return (
-          `<ul class="sortableGroup"><div class="top-label">Top Label</div>${listItems.join('')}<div class="bottom-label">Bottom Label</div></ul>`
+          `<ul class="sortableGroup"><div class="top-label">${topLabel}</div>${listItems.join('')}<div class="bottom-label">${botLabel}</div></ul>`
+      );
+    },
+    form: function (params) {
+      var title = params[0] ? params[0] : 'Open Text Question?';
+      var placeholder = params[1] ? params[1] : 'Type your answer here...';
+      var buttonTitle = params[2] ? params[2] : 'Submit';
+
+      return (
+          `<form class="question-form"><label class="question-title">${title}</label>
+            <textarea maxlength="2000" class="question-input" rows="8" placeholder="${placeholder}"></textarea>
+            <button class="form-button" type="submit">${buttonTitle}</button>
+           </form>`
       );
     }
   };
